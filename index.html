@@ -10,30 +10,33 @@
   <meta property="og:description" content="BBA student at IBA, University of Rajshahi.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to Content</a>
 
+  <!-- ===== SECTION: header | START ===== -->
   <header class="site-header">
     <a class="logo" href="#home" aria-label="Home">Sayem<span class="dot">.</span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
     <nav id="site-nav" aria-label="Main">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#creative">Creative Work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#projects">Project</a></li>
+        <li><a href="#creative">Creative Work</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+  <!-- ===== SECTION: header | END ===== -->
 
   <main id="main">
 
-    <!-- HERO -->
+    <!-- ===== SECTION: hero | START ===== -->
     <section id="home" class="hero">
       <div class="hero-photo">
         <!-- LATER: replace this div with
@@ -50,18 +53,20 @@
         </div>
       </div>
     </section>
+    <!-- ===== SECTION: hero | END ===== -->
 
-    <!-- IMPACT AT A GLANCE -->
+    <!-- ===== SECTION: impact | START ===== -->
     <section id="impact" aria-label="Impact at a Glance">
       <div class="stats">
-        <div class="stat"><span class="stat-num">500+</span><span class="stat-title">Campus Stakeholders</span><span class="stat-note">Reached Through Clean Campus</span></div>
-        <div class="stat"><span class="stat-num">10</span><span class="stat-title">Dustbins Installed</span><span class="stat-note">Campus Waste-Management Initiative</span></div>
-        <div class="stat"><span class="stat-num">15+</span><span class="stat-title">Class Promotions</span><span class="stat-note">RUBC Recruitment 11.0</span></div>
-        <div class="stat"><span class="stat-num">3.64</span><span class="stat-title">Current CGPA</span><span class="stat-note">BBA, University of Rajshahi</span></div>
+        <div class="stat"><span class="stat-num" data-count="500" data-suffix="+">500+</span><span class="stat-title">Campus Stakeholders</span><span class="stat-note">Reached Through Clean Campus</span></div>
+        <div class="stat"><span class="stat-num" data-count="10">10</span><span class="stat-title">Dustbins Installed</span><span class="stat-note">Campus Waste-Management Initiative</span></div>
+        <div class="stat"><span class="stat-num" data-count="15" data-suffix="+">15+</span><span class="stat-title">Class Promotions</span><span class="stat-note">RUBC Recruitment 11.0</span></div>
+        <div class="stat"><span class="stat-num" data-count="3.64" data-decimals="2">3.64</span><span class="stat-title">Current CGPA</span><span class="stat-note">BBA, University of Rajshahi</span></div>
       </div>
     </section>
+    <!-- ===== SECTION: impact | END ===== -->
 
-    <!-- ABOUT -->
+    <!-- ===== SECTION: about | START ===== -->
     <section id="about">
       <p class="eyebrow">About Me</p>
       <h2>A Curious Mind With An <span class="accent">Execution Mindset</span></h2>
@@ -69,12 +74,146 @@
       <p>My university experience extends beyond the classroom. Through my involvement with the Rajshahi University Business Club, I've participated in recruitment initiatives, event organization, promotional campaigns, and brand activation projects. These experiences have taught me how to collaborate with people, coordinate activities, and turn plans into practical outcomes.</p>
       <p>I also enjoy challenging myself through public speaking, business case competitions, presentations, and community initiatives. Whether it's hosting an event, presenting an idea, or working with a team, I value opportunities that push me to learn, contribute, and grow.</p>
     </section>
+    <!-- ===== SECTION: about | END ===== -->
 
-    <!-- CREATIVE WORK (photo and video holders) -->
+    <!-- ===== SECTION: experience | START ===== -->
+    <section id="experience">
+      <p class="eyebrow">Professional Journey</p>
+      <h2>Where I've <span class="accent">Led</span></h2>
+      <ol class="timeline">
+        <li>
+          <h3>Junior Member, Rajshahi University Business Club</h3>
+          <p class="meta">On-Campus</p>
+          <p class="date">SEPTEMBER 2025 – PRESENT</p>
+          <ul>
+            <li>Contributed to Recruitment 11.0 through 15+ class promotions and on-site recruitment facilitation.</li>
+            <li>Participated in planning, promotional activities, and organizational operations for Unravel Hexa, a regional case competition.</li>
+            <li>Supported the venue setup and execution of GlucoMax D's on-campus brand activation in collaboration with Unilever Bangladesh.</li>
+            <li>Hosted university events, including GP Futuremaker Roadshow and RUBC Freshers' Reception.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <!-- ===== SECTION: experience | END ===== -->
+
+    <!-- ===== SECTION: achievements | START ===== -->
+    <section id="achievements">
+      <p class="eyebrow">Achievements</p>
+      <h2>Moments That <span class="accent">Matter</span></h2>
+      <div class="card-grid">
+        <!-- LATER: replace a card's <div class="card-photo"> with
+             <img class="card-photo" src="assets/images/FILE.jpg" alt="DESCRIPTION" loading="lazy" width="800" height="500"> -->
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge badge-win">Champion</span>
+          <h3>English Public Speaking Competition</h3>
+          <p>Organized by RU Voice</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge badge-win">Champion</span>
+          <h3>Poster Presentation</h3>
+          <p>Intra RUCCian Battle, Rajshahi University Career Club</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge badge-win">Champion</span>
+          <h3>Inter-House English Public Speaking Competition</h3>
+          <p>Barishal Cadet College</p>
+          <p class="date">2022 &amp; 2023</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge badge-win">Bronze Medalist</span>
+          <h3>English Impromptu Speech</h3>
+          <p>4th Bakeman's International Language League</p>
+          <p class="meta">Department of English and Other Languages, NSU</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge">Finalist</span>
+          <h3>Bangla Impromptu Speech</h3>
+          <p>4th Bakeman's International Language League</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge">Finalist</span>
+          <h3>Hult Prize</h3>
+          <p>University of Rajshahi</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge">Finalist</span>
+          <h3>SkinCafe Sun-Funday</h3>
+          <p>National Business Case Competition</p>
+          <p class="meta">Skin Cafe and Bangladesh Socio-Cultural Forum</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge">Runner-Up</span>
+          <h3>Vision2Action</h3>
+          <p>Surge Bangladesh</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge">Runner-Up</span>
+          <h3>BuzzXcel</h3>
+          <p>Rajshahi University Marketing Club</p>
+          <p class="date">2026</p>
+        </article>
+
+        <article class="card">
+          <div class="card-photo" aria-hidden="true">PHOTO</div>
+          <span class="badge">Runner-Up</span>
+          <h3>Focus Group Discussion</h3>
+          <p>Intra RUCCian Battle</p>
+          <p class="date">2026</p>
+        </article>
+      </div>
+    </section>
+    <!-- ===== SECTION: achievements | END ===== -->
+
+    <!-- ===== SECTION: projects | START ===== -->
+    <section id="projects">
+      <p class="eyebrow">Featured Project</p>
+      <h2>Clean <span class="accent">Campus</span></h2>
+      <article class="card">
+        <!-- LATER: replace with the real project photo (check permission first) -->
+        <div class="card-photo" aria-hidden="true">PHOTO</div>
+        <span class="badge badge-win">Social Impact Initiative</span>
+        <h3>Turning Awareness Into Action</h3>
+        <p>Clean Campus was a student-led awareness campaign focused on improving waste management practices and promoting a healthier environment across the University of Rajshahi campus.</p>
+        <h3 class="sub">What We Accomplished</h3>
+        <ul class="bullets">
+          <li>Reached 500+ campus stakeholders through awareness initiatives.</li>
+          <li>Identified waste-disposal hotspots and installed 10 dustbins.</li>
+          <li>Collaborated with RUCSU to support a cleaner campus environment.</li>
+        </ul>
+      </article>
+    </section>
+    <!-- ===== SECTION: projects | END ===== -->
+
+    <!-- ===== SECTION: creative | START ===== -->
     <section id="creative">
       <p class="eyebrow">Creative Work</p>
       <h2>Photography &amp; Video <span class="accent">Editing</span></h2>
-      <p>SAMPLE INTRO: A selection of my visual work, from photography to edited videos.</p>
+      <p>I have a creative interest in photography and video editing, where I explore visual storytelling, composition, and creative expression. I enjoy capturing moments, experimenting with perspectives, and transforming raw footage into engaging visual content through thoughtful editing and attention to detail.</p>
 
       <h3 class="sub">Photography</h3>
       <div class="media-grid">
@@ -99,135 +238,9 @@
         <figure class="media-item"><div class="media-box video" aria-hidden="true"><span class="play">&#9654;</span>VIDEO</div><figcaption>Video Title 2</figcaption></figure>
       </div>
     </section>
+    <!-- ===== SECTION: creative | END ===== -->
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <p class="eyebrow">Professional Journey</p>
-      <h2>Where I've <span class="accent">Led</span></h2>
-      <ol class="timeline">
-        <li>
-          <h3>Junior Member, Rajshahi University Business Club</h3>
-          <p class="meta">On-Campus</p>
-          <p class="date">SEPTEMBER 2025 – PRESENT</p>
-          <ul>
-            <li>Contributed to Recruitment 11.0 through 15+ class promotions and on-site recruitment facilitation.</li>
-            <li>Participated in planning, promotional activities, and organizational operations for Unravel Hexa, a regional case competition.</li>
-            <li>Supported the venue setup and execution of GlucoMax D's on-campus brand activation in collaboration with Unilever Bangladesh.</li>
-            <li>Hosted university events, including GP Futuremaker Roadshow and RUBC Freshers' Reception.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ACHIEVEMENTS: champions first, then by rank. Add the year inside each card when known. -->
-    <section id="achievements">
-      <p class="eyebrow">Achievements</p>
-      <h2>Moments That <span class="accent">Matter</span></h2>
-      <div class="card-grid">
-        <!-- LATER: replace a card's <div class="card-photo"> with
-             <img class="card-photo" src="assets/images/FILE.jpg" alt="DESCRIPTION" loading="lazy" width="800" height="500"> -->
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge badge-win">Champion</span>
-          <h3>English Public Speaking Competition</h3>
-          <p>Organized by RU Voice</p>
-          <!-- ADD YEAR -->
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge badge-win">Champion</span>
-          <h3>Poster Presentation</h3>
-          <p>Intra RUCCian Battle, Rajshahi University Career Club</p>
-          <!-- ADD YEAR -->
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge badge-win">Champion</span>
-          <h3>Inter-House English Public Speaking Competition</h3>
-          <p>Barishal Cadet College, 2022 and 2023</p>
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge badge-win">Bronze Medalist</span>
-          <h3>English Impromptu Speech</h3>
-          <p>4th Bakeman's International Language League 2026</p>
-          <p class="meta">Department of English and Other Languages, NSU</p>
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge">Finalist</span>
-          <h3>Bangla Impromptu Speech</h3>
-          <p>4th Bakeman's International Language League 2026</p>
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge">Finalist</span>
-          <h3>Hult Prize</h3>
-          <p>University of Rajshahi</p>
-          <!-- ADD YEAR -->
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge">Finalist</span>
-          <h3>SkinCafe Sun-Funday</h3>
-          <p>National Business Case Competition</p>
-          <p class="meta">Skin Cafe and Bangladesh Socio-Cultural Forum</p>
-          <!-- ADD YEAR -->
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge">Runner-Up</span>
-          <h3>Vision2Action</h3>
-          <p>Surge Bangladesh</p>
-          <!-- ADD YEAR -->
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge">Runner-Up</span>
-          <h3>BuzzXcel</h3>
-          <p>Rajshahi University Marketing Club</p>
-          <!-- ADD YEAR -->
-        </article>
-
-        <article class="card">
-          <div class="card-photo" aria-hidden="true">PHOTO</div>
-          <span class="badge">Runner-Up</span>
-          <h3>Focus Group Discussion</h3>
-          <p>Intra RUCCian Battle</p>
-          <!-- ADD YEAR -->
-        </article>
-      </div>
-    </section>
-
-    <!-- FEATURED PROJECT -->
-    <section id="projects">
-      <p class="eyebrow">Featured Project</p>
-      <h2>Clean <span class="accent">Campus</span></h2>
-      <article class="card">
-        <!-- LATER: replace with the real project photo (check permission first) -->
-        <div class="card-photo" aria-hidden="true">PHOTO</div>
-        <span class="badge badge-win">Social Impact Initiative</span>
-        <h3>Turning Awareness Into Action</h3>
-        <p>Clean Campus was a student-led awareness campaign focused on improving waste management practices and promoting a healthier environment across the University of Rajshahi campus.</p>
-        <h3 class="sub">What We Accomplished</h3>
-        <ul class="bullets">
-          <li>Reached 500+ campus stakeholders through awareness initiatives.</li>
-          <li>Identified waste-disposal hotspots and installed 10 dustbins.</li>
-          <li>Collaborated with RUCSU to support a cleaner campus environment.</li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- SKILLS -->
+    <!-- ===== SECTION: skills | START ===== -->
     <section id="skills">
       <p class="eyebrow">Skills &amp; Competencies</p>
       <h2>What I <span class="accent">Bring</span></h2>
@@ -265,8 +278,9 @@
         </div>
       </div>
     </section>
+    <!-- ===== SECTION: skills | END ===== -->
 
-    <!-- EDUCATION -->
+    <!-- ===== SECTION: education | START ===== -->
     <section id="education">
       <p class="eyebrow">Education</p>
       <h2>Where I <span class="accent">Studied</span></h2>
@@ -300,8 +314,9 @@
         </li>
       </ol>
     </section>
+    <!-- ===== SECTION: education | END ===== -->
 
-    <!-- CONTACT -->
+    <!-- ===== SECTION: contact | START ===== -->
     <section id="contact">
       <p class="eyebrow">Let's Connect</p>
       <h2>Have An Idea Or <span class="accent">Opportunity</span> In Mind?</h2>
@@ -314,15 +329,17 @@
       </ul>
       <p class="closing">Let's connect, exchange ideas, and create something meaningful.</p>
     </section>
+    <!-- ===== SECTION: contact | END ===== -->
 
   </main>
 
+  <!-- ===== SECTION: footer | START ===== -->
   <footer class="site-footer">
     <p>&copy; <span id="year">2026</span> Sayem Ibn Masud. All rights reserved.</p>
     <a href="mailto:sayemibnmasud0@gmail.com">Email</a>
     <a href="#home" class="back-to-top">Back to Top ↑</a>
   </footer>
+  <!-- ===== SECTION: footer | END ===== -->
 
-  <script src="script.js"></script>
 </body>
 </html>
