@@ -272,3 +272,33 @@ h3.sub { margin: 2rem 0 1rem; color: var(--accent); }
 .bullets li::before { content: "›"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 .closing { margin-top: 1.5rem; font-style: italic; color: var(--muted); 
 }
+
+/* ============ 13. PHOTO AND VIDEO HOLDERS ============ */
+.card-photo {
+  width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+  border-radius: 14px; margin-bottom: 1rem;
+  display: grid; place-items: center;
+  background: var(--tint); color: var(--muted);
+  letter-spacing: .2em; font-size: .8rem; font-weight: 600;
+  border: 1px dashed var(--accent);
+}
+.media-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
+.video-grid { display: grid; gap: 1rem; }
+@media (min-width: 760px) {
+  .media-grid { grid-template-columns: repeat(3, 1fr); }
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.media-item { margin: 0; }
+.media-item img, .media-item iframe, .media-box {
+  width: 100%; border-radius: 14px; display: block;
+}
+.media-box {
+  aspect-ratio: 4 / 3; display: grid; place-items: center; align-content: center; gap: .4rem;
+  background: var(--tint); color: var(--muted);
+  letter-spacing: .2em; font-size: .8rem; font-weight: 600;
+  border: 1px dashed var(--accent);
+}
+.media-box.video { aspect-ratio: 16 / 9; }
+.media-item iframe { aspect-ratio: 16 / 9; border: 0; }
+.play { font-size: 1.8rem; color: var(--accent); letter-spacing: 0; }
+.media-item figcaption { margin-top: .5rem; font-size: .95rem; color: var(--muted); }
