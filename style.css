@@ -1,1 +1,227 @@
-/* Style go here */
+/* ============ 1. DESIGN TOKENS ============
+   All colours live here. Change one value and the whole site updates. */
+:root {
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --text: #0F172A;
+  --muted: #475569;
+  --accent: #2563EB;
+  --accent-2: #0EA5E9;
+  --tint: #E0E9FF;
+  --line: #E2E8F0;
+  --radius: 20px;
+  --max: 1080px;
+  --font-head: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light dark;
+}
+
+/* Dark mode: used automatically if the visitor's phone is in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #111A2E;
+    --text: #E6EAF2;
+    --muted: #A3AEC2;
+    --accent: #60A5FA;
+    --accent-2: #38BDF8;
+    --tint: #1E2A4A;
+    --line: #22304D;
+  }
+}
+
+/* ============ 2. RESET AND BASE ============ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); }
+ul, ol { padding: 0; margin: 0; list-style: none; }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.1; margin: 0; }
+p { margin: 0 0 1rem; }
+
+/* Visible focus ring for keyboard users (accessibility) */
+:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+
+/* Skip link: hidden until a keyboard user tabs to it */
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem;
+  background: var(--accent); color: #fff;
+  padding: .6rem 1rem; border-radius: 8px; z-index: 100;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ============ 3. LAYOUT ============ */
+main > section, .site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
+}
+
+/* Small uppercase label with a line before it */
+.eyebrow {
+  display: flex; align-items: center; gap: .75rem;
+  font-size: .8rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1rem;
+}
+.eyebrow::before { content: ""; width: 2rem; height: 2px; background: currentColor; }
+
+/* Section headings with a short bar underneath */
+h2 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; margin-bottom: 2rem; }
+h2::after {
+  content: ""; display: block; width: 3.5rem; height: 4px; border-radius: 4px;
+  margin-top: 1rem; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .5rem; }
+
+/* The blue word in headlines */
+.accent {
+  color: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============ 4. HEADER AND NAVIGATION ============ */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  padding: .9rem 1.5rem;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  font-family: var(--font-head); font-size: 1.5rem; font-weight: 700;
+  color: var(--text); text-decoration: none;
+}
+.logo .dot { color: var(--accent); }
+
+#site-nav ul { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+#site-nav a {
+  color: var(--muted); text-decoration: none; font-weight: 500; font-size: .95rem;
+  padding: .35rem 0; border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+#site-nav a:hover, #site-nav a.active { color: var(--accent); border-color: var(--accent); }
+
+/* Hamburger button: only appears once script.js adds the "js" class (Phase 5) */
+.nav-toggle {
+  display: none;
+  background: none; border: 1px solid var(--line); color: var(--text);
+  border-radius: 10px; padding: .5rem .9rem; font: inherit; cursor: pointer;
+}
+@media (max-width: 800px) {
+  .site-header { flex-wrap: wrap; }
+  #site-nav { width: 100%; }
+  #site-nav ul { padding: .75rem 0; }
+  html.js .nav-toggle { display: inline-flex; }
+  html.js #site-nav { display: none; }
+  html.js #site-nav.open { display: block; }
+  html.js #site-nav ul { flex-direction: column; }
+}
+
+/* ============ 5. HERO ============ */
+.hero {
+  display: grid; gap: 2.5rem; text-align: center; align-items: center;
+  padding-top: 3rem;
+}
+.hero-photo { display: grid; place-items: center; }
+.photo-placeholder, .hero-photo img {
+  width: min(70vw, 340px); aspect-ratio: 1; border-radius: 50%;
+  object-fit: cover; position: relative;
+  background: radial-gradient(circle at 50% 35%, var(--tint), transparent 75%);
+  display: grid; place-items: center; color: var(--muted); letter-spacing: .2em;
+}
+/* Dashed ring around the photo */
+.hero-photo { position: relative; }
+.hero-photo::before {
+  content: ""; position: absolute; width: min(78vw, 380px); aspect-ratio: 1;
+  border: 2px dashed var(--accent); border-radius: 50%; opacity: .45;
+}
+.hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); font-weight: 800; }
+.hero .eyebrow { justify-content: center; }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 36rem; margin: 1.25rem auto 2rem; }
+
+.btn {
+  display: inline-block; padding: .9rem 1.8rem; border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff; font-weight: 600; text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37,99,235,.3); }
+
+@media (min-width: 860px) {
+  .hero { grid-template-columns: 1.1fr .9fr; text-align: left; }
+  .hero-photo { order: 2; }
+  .hero .eyebrow { justify-content: flex-start; }
+  .lead { margin-left: 0; }
+}
+
+/* ============ 6. SKILLS ============ */
+.skill-groups { display: grid; gap: 1.25rem; }
+.skill-group {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.5rem;
+}
+.skill-group li {
+  display: inline-block; margin: .25rem .25rem 0 0; padding: .3rem .8rem;
+  background: var(--tint); border-radius: 999px; font-size: .9rem;
+}
+@media (min-width: 760px) { .skill-groups { grid-template-columns: repeat(3, 1fr); } }
+
+/* ============ 7. CARDS (projects and achievements) ============ */
+.card-grid { display: grid; gap: 1.5rem; }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.75rem;
+  transition: transform .25s, box-shadow .25s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(15,23,42,.08); }
+.number {
+  display: block; font-family: var(--font-head); font-size: 3rem; font-weight: 700;
+  color: var(--tint); line-height: 1; margin-bottom: .75rem;
+}
+.card dl { margin: 1rem 0; }
+.card dt { font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+.card dd { margin: 0 0 .75rem; color: var(--muted); }
+.text-link { font-weight: 600; }
+@media (min-width: 760px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ============ 8. TIMELINE (experience and education) ============ */
+.timeline { border-left: 2px solid var(--accent); margin-left: .6rem; padding-left: 2rem; }
+.timeline > li { position: relative; padding-bottom: 2.5rem; }
+.timeline > li::before {
+  content: ""; position: absolute; left: calc(-2rem - 8px); top: .35rem;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--accent);
+}
+.meta { color: var(--muted); margin-bottom: .25rem; }
+.date { color: var(--accent); font-size: .8rem; font-weight: 600; letter-spacing: .15em; }
+.timeline li li { position: relative; padding-left: 1.4rem; margin-bottom: .5rem; }
+.timeline li li::before { content: "›"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+/* ============ 9. CONTACT AND FOOTER ============ */
+.contact-list { display: grid; gap: .5rem; font-size: 1.15rem; }
+.site-footer {
+  display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
+  justify-content: space-between; padding-top: 2rem; padding-bottom: 2.5rem;
+  border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem;
+}
+.site-footer p { margin: 0; }
+.social-links { display: flex; gap: 1rem; }
+
+/* ============ 10. MOTION PREFERENCES ============
+   If a visitor asks their device for less motion, we respect it. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
