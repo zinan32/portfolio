@@ -3,37 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO: what Google and link previews show. EDIT these. -->
-  <title>YOUR NAME | YOUR PROFESSIONAL HEADLINE</title>
-  <meta name="description" content="YOUR ONE-SENTENCE SUMMARY (max ~155 characters).">
-  <meta name="author" content="YOUR NAME">
-  <meta property="og:title" content="YOUR NAME | Portfolio">
-  <meta property="og:description" content="YOUR ONE-SENTENCE SUMMARY.">
+  <title>Sayem Ibn Masud | Business Student &amp; Aspiring Professional</title>
+  <meta name="description" content="Sayem Ibn Masud, BBA student at IBA, University of Rajshahi. Leadership, communication, events and social impact.">
+  <meta name="author" content="Sayem Ibn Masud">
+  <meta property="og:title" content="Sayem Ibn Masud | Portfolio">
+  <meta property="og:description" content="BBA student at IBA, University of Rajshahi.">
   <meta property="og:type" content="website">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Lets keyboard users skip the menu -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ========== HEADER / NAVIGATION ========== -->
   <header class="site-header">
-    <a class="logo" href="#home" aria-label="Home">YOURNAME<span class="dot">.</span></a>
-
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      Menu
-    </button>
-
+    <a class="logo" href="#home" aria-label="Home">Sayem<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
     <nav id="site-nav" aria-label="Main">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -42,146 +32,218 @@
 
   <main id="main">
 
-    <!-- ========== HERO ========== -->
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-photo">
-        <!-- Later: replace this div with
-             <img src="assets/images/profile.jpg" alt="Portrait of YOUR NAME" width="480" height="480"> -->
+        <!-- LATER: replace this div with
+             <img src="assets/images/profile.jpg" alt="Portrait of Sayem Ibn Masud" width="480" height="480"> -->
         <div class="photo-placeholder">PHOTO</div>
       </div>
       <div class="hero-text">
-        <p class="eyebrow">YOUR PROFESSIONAL HEADLINE</p>
-        <h1>FIRST NAME <span class="accent">LAST NAME</span></h1>
-        <p class="lead">YOUR SHORT INTRODUCTION: 1-2 sentences on who you are and what you do.</p>
-        <a class="btn" href="#contact">Get in touch</a>
+        <p class="eyebrow">Business Student &amp; Aspiring Professional</p>
+        <h1>Sayem Ibn <span class="accent">Masud</span></h1>
+        <p class="lead">Building ideas, leading initiatives, and creating meaningful impact. I'm a Business Administration student at the University of Rajshahi, passionate about leadership, strategic thinking, communication, and turning ideas into action.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#experience">Explore my journey</a>
+          <a class="btn btn-outline" href="#contact">Let's connect</a>
+        </div>
       </div>
     </section>
 
-    <!-- ========== ABOUT ========== -->
+    <!-- IMPACT AT A GLANCE -->
+    <section id="impact" aria-label="Impact at a glance">
+      <div class="stats">
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-title">Campus stakeholders</span><span class="stat-note">Reached through Clean Campus</span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-title">Dustbins installed</span><span class="stat-note">Campus waste-management initiative</span></div>
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-title">Class promotions</span><span class="stat-note">RUBC Recruitment 11.0</span></div>
+        <div class="stat"><span class="stat-num">3.64</span><span class="stat-title">Current CGPA</span><span class="stat-note">BBA, University of Rajshahi</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
     <section id="about">
       <p class="eyebrow">About me</p>
-      <h2>HEADLINE WORD(S) <span class="accent">ACCENT WORD</span></h2>
-      <p>PARAGRAPH 1: professional introduction.</p>
-      <p>PARAGRAPH 2: background and interests.</p>
-      <p>PARAGRAPH 3: career objectives and professional values.</p>
+      <h2>A curious mind with an <span class="accent">execution mindset</span></h2>
+      <p>I'm a Business Administration student at the Institute of Business Administration, University of Rajshahi. I enjoy exploring the intersection of business, leadership, communication, and strategic thinking.</p>
+      <p>My university experience extends beyond the classroom. Through my involvement with the Rajshahi University Business Club, I've participated in recruitment initiatives, event organization, promotional campaigns, and brand activation projects. These experiences have taught me how to collaborate with people, coordinate activities, and turn plans into practical outcomes.</p>
+      <p>I also enjoy challenging myself through public speaking, business case competitions, presentations, and community initiatives. Whether it's hosting an event, presenting an idea, or working with a team, I value opportunities that push me to learn, contribute, and grow.</p>
     </section>
 
-    <!-- ========== SKILLS ========== -->
-    <section id="skills">
-      <p class="eyebrow">Skills</p>
-      <h2>What I <span class="accent">bring</span></h2>
-      <div class="skill-groups">
-        <div class="skill-group">
-          <h3>Technical skills</h3>
-          <ul>
-            <li>SKILL 1</li>
-            <li>SKILL 2</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Professional skills</h3>
-          <ul>
-            <li>SKILL 1</li>
-            <li>SKILL 2</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Tools and technologies</h3>
-          <ul>
-            <li>TOOL 1</li>
-            <li>TOOL 2</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PROJECTS ========== -->
-    <section id="projects">
-      <p class="eyebrow">Projects</p>
-      <h2>Selected <span class="accent">work</span></h2>
-      <div class="card-grid">
-        <!-- Copy this whole <article> block for each new project -->
-        <article class="card">
-          <h3>PROJECT TITLE</h3>
-          <p>OVERVIEW: what the project is.</p>
-          <dl>
-            <dt>My role</dt><dd>YOUR ROLE AND RESPONSIBILITIES</dd>
-            <dt>Tools</dt><dd>TOOLS / TECHNOLOGIES USED</dd>
-            <dt>Challenge</dt><dd>THE PROBLEM YOU FACED</dd>
-            <dt>Solution</dt><dd>HOW YOU SOLVED IT</dd>
-            <dt>Outcome</dt><dd>MEASURABLE RESULT, IF ANY</dd>
-          </dl>
-          <a href="#" class="text-link">View live project</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- ========== EXPERIENCE ========== -->
+    <!-- EXPERIENCE -->
     <section id="experience">
       <p class="eyebrow">Professional journey</p>
-      <h2>Where I've <span class="accent">worked</span></h2>
+      <h2>Where I've <span class="accent">led</span></h2>
       <ol class="timeline">
-        <!-- Copy this <li> for each role -->
         <li>
-          <h3>JOB TITLE</h3>
-          <p class="meta">ORGANISATION · Remote / Onsite</p>
-          <p class="date">MONTH YEAR – MONTH YEAR</p>
+          <h3>Junior Member, Rajshahi University Business Club</h3>
+          <p class="meta">On-campus</p>
+          <p class="date">SEPTEMBER 2025 – PRESENT</p>
           <ul>
-            <li>WHAT YOU DID / ACHIEVED</li>
-            <li>WHAT YOU DID / ACHIEVED</li>
+            <li>Contributed to Recruitment 11.0 through 15+ class promotions and on-site recruitment facilitation.</li>
+            <li>Participated in planning, promotional activities, and organizational operations for Unravel Hexa, a regional case competition.</li>
+            <li>Supported the venue setup and execution of GlucoMax D's on-campus brand activation in collaboration with Unilever Bangladesh.</li>
+            <li>Hosted university events, including GP Futuremaker Roadshow and RUBC Freshers' Reception.</li>
           </ul>
         </li>
       </ol>
     </section>
 
-    <!-- ========== ACHIEVEMENTS ========== -->
+    <!-- ACHIEVEMENTS -->
     <section id="achievements">
       <p class="eyebrow">Achievements</p>
       <h2>Moments that <span class="accent">matter</span></h2>
       <div class="card-grid">
+        <!-- LATER: add a photo to a card with <img src="assets/images/FILE.jpg" alt="DESCRIPTION" loading="lazy"> as the first line inside the article -->
         <article class="card">
-          <span class="number">01</span>
-          <h3>ACHIEVEMENT TITLE</h3>
-          <p>WHO ORGANISED IT AND WHAT YOU WON / DID.</p>
+          <span class="badge badge-win">Bronze Medalist</span>
+          <h3>English Impromptu Speech</h3>
+          <p>4th Bakeman's International Language League 2026</p>
+          <p class="meta">Department of English and Other Languages, NSU</p>
         </article>
+        <article class="card">
+          <span class="badge">Finalist</span>
+          <h3>Hult Prize</h3>
+          <p>University of Rajshahi</p>
+        </article>
+        <article class="card">
+          <span class="badge">Finalist</span>
+          <h3>SkinCafe Sun-Funday</h3>
+          <p>National Business Case Competition</p>
+          <p class="meta">Skin Cafe and Bangladesh Socio-Cultural Forum</p>
+        </article>
+        <article class="card">
+          <span class="badge badge-win">Champion</span>
+          <h3>English Public Speaking Competition</h3>
+          <p>Organized by RU Voice</p>
+        </article>
+        <article class="card">
+          <span class="badge badge-win">Champion</span>
+          <h3>Poster Presentation</h3>
+          <p>Intra RUCCian Battle, Rajshahi University Career Club</p>
+        </article>
+      </div>
+
+      <h3 class="sub">Other recognitions</h3>
+      <ul class="bullets">
+        <li>Runner-up, Vision2Action, Surge Bangladesh.</li>
+        <li>Runner-up, BuzzXcel, Rajshahi University Marketing Club.</li>
+        <li>Runner-up, Focus Group Discussion, Intra RUCCian Battle.</li>
+        <li>Champion, Inter-House English Public Speaking Competition, 2022 and 2023, Barishal Cadet College.</li>
+        <li>Finalist, Bangla Impromptu Speech, 4th Bakeman's International Language League 2026.</li>
+      </ul>
+    </section>
+
+    <!-- FEATURED PROJECT -->
+    <section id="projects">
+      <p class="eyebrow">Featured project</p>
+      <h2>Clean <span class="accent">Campus</span></h2>
+      <article class="card">
+        <span class="badge badge-win">Social impact initiative</span>
+        <!-- LATER: add the project photo here (check you have permission to use it) -->
+        <h3>Turning awareness into action</h3>
+        <p>Clean Campus was a student-led awareness campaign focused on improving waste management practices and promoting a healthier environment across the University of Rajshahi campus.</p>
+        <h3 class="sub">What we accomplished</h3>
+        <ul class="bullets">
+          <li>Reached 500+ campus stakeholders through awareness initiatives.</li>
+          <li>Identified waste-disposal hotspots and installed 10 dustbins.</li>
+          <li>Collaborated with RUCSU to support a cleaner campus environment.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <p class="eyebrow">Skills &amp; competencies</p>
+      <h2>What I <span class="accent">bring</span></h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Technical &amp; tools</h3>
+          <ul>
+            <li>Canva</li>
+            <li>Microsoft Office</li>
+            <li>CapCut</li>
+            <li>Presentation design</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Leadership &amp; management</h3>
+          <ul>
+            <li>Leadership</li>
+            <li>Event management</li>
+            <li>Project coordination</li>
+            <li>Teamwork</li>
+            <li>Promotional activities</li>
+            <li>Brand activation support</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Professional</h3>
+          <ul>
+            <li>Public speaking</li>
+            <li>Communication</li>
+            <li>Persuasion</li>
+            <li>Critical thinking</li>
+            <li>Adaptability</li>
+            <li>Hosting &amp; moderation</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ========== EDUCATION ========== -->
+    <!-- EDUCATION -->
     <section id="education">
       <p class="eyebrow">Education</p>
       <h2>Where I <span class="accent">studied</span></h2>
       <ol class="timeline">
         <li>
-          <h3>DEGREE / QUALIFICATION</h3>
-          <p class="meta">INSTITUTION</p>
-          <p class="date">START YEAR – END YEAR</p>
-          <p>RELEVANT COURSEWORK OR ACHIEVEMENTS.</p>
+          <h3>Bachelor of Business Administration</h3>
+          <p class="meta">Institute of Business Administration (IBA), University of Rajshahi</p>
+          <p class="date">AUGUST 2025 – PRESENT</p>
+          <p>CGPA: 3.64 / 4.00</p>
+        </li>
+        <li>
+          <h3>Higher Secondary Certificate</h3>
+          <p class="meta">Barishal Cadet College</p>
+          <p class="date">2023 – 2024</p>
+          <p>GPA: 5.00 / 5.00</p>
+        </li>
+      </ol>
+
+      <h3 class="sub">Certifications &amp; training</h3>
+      <ol class="timeline">
+        <li>
+          <h3>Building Bridges through Leadership Training (BBLT)</h3>
+          <p class="meta">Bangladesh Youth Leadership Center (BYLC)</p>
+          <p class="date">17 JULY – 05 SEPTEMBER 2026</p>
+          <p>Seven-week program.</p>
+        </li>
+        <li>
+          <h3>Human Rights Orientation Session</h3>
+          <p class="meta">National Human Rights Commission (NHRC) and UNDP Bangladesh, with Surge Bangladesh</p>
+          <p>Online training covering human rights, equality, fundamental freedoms, and accountability.</p>
         </li>
       </ol>
     </section>
 
-    <!-- ========== CONTACT ========== -->
+    <!-- CONTACT -->
     <section id="contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Let's <span class="accent">talk</span></h2>
-      <p>A short invitation, e.g. "I'm open to new opportunities."</p>
+      <p class="eyebrow">Let's connect</p>
+      <h2>Have an idea or <span class="accent">opportunity</span> in mind?</h2>
+      <p>I'm always interested in meeting people, exploring new opportunities, and collaborating on meaningful initiatives. I'm particularly interested in business, leadership, marketing, communication, and professional development.</p>
       <ul class="contact-list">
-        <li><a href="mailto:YOUR@EMAIL.COM">YOUR@EMAIL.COM</a></li>
-        <li><a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:sayemibnmasud0@gmail.com">sayemibnmasud0@gmail.com</a></li>
+        <!-- LATER: add LinkedIn and GitHub when they exist:
+        <li><a href="https://www.linkedin.com/in/HANDLE" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a></li> -->
       </ul>
+      <p class="closing">Let's connect, exchange ideas, and create something meaningful.</p>
     </section>
 
   </main>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
-    <p>&copy; <span id="year">2026</span> YOUR NAME. All rights reserved.</p>
-    <ul class="social-links">
-      <li><a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
+    <p>&copy; <span id="year">2026</span> Sayem Ibn Masud. All rights reserved.</p>
+    <a href="mailto:sayemibnmasud0@gmail.com">Email</a>
     <a href="#home" class="back-to-top">Back to top ↑</a>
   </footer>
 
