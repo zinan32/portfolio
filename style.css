@@ -302,3 +302,7 @@ h3.sub { margin: 2rem 0 1rem; color: var(--accent); }
 .media-item iframe { aspect-ratio: 16 / 9; border: 0; }
 .play { font-size: 1.8rem; color: var(--accent); letter-spacing: 0; }
 .media-item figcaption { margin-top: .5rem; font-size: .95rem; color: var(--muted); }
+
+/* ===== STYLE SECTION: stat-counters | START ===== */
+.stat-num { font-variant-numeric: tabular-nums; }
+/* ===== STYLE SECTION: stat-counters | END ===== */
