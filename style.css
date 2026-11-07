@@ -225,3 +225,14 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .5rem; }
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* ============ 11. SCROLL REVEAL ============ */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+html.js .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
