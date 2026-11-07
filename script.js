@@ -83,3 +83,48 @@ if ('IntersectionObserver' in window && !reduceMotion) {
     revealObserver.observe(item);
   });
 }
+/* ===== SCRIPT SECTION: stat-counters | START =====
+   Counts the four top numbers up from 0 when they scroll into view.
+   The final numbers are already written in index.html, so if JavaScript
+   fails (or the visitor prefers reduced motion) they still show correctly. */
+(function () {
+  const counters = document.querySelectorAll('[data-count]');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!counters.length || reduceMotion || !('IntersectionObserver' in window)) return;
+
+  // Writes one frame of the animation, keeping decimals and the "+" sign
+  function show(el, value) {
+    const decimals = Number(el.dataset.decimals || 0);
+    const suffix = el.dataset.suffix || '';
+    el.textContent = value.toFixed(decimals) + suffix;
+  }
+
+  function animate(el) {
+    const target = Number(el.dataset.count);
+    const duration = 1800; // milliseconds
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // fast at first, gentle landing
+      show(el, target * eased);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        observer.unobserve(entry.target); // run once only
+      }
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach((el) => {
+    show(el, 0); // start from zero
+    counterObserver.observe(el);
+  });
+})();
+/* ===== SCRIPT SECTION: stat-counters | END ===== */
