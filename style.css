@@ -306,3 +306,15 @@ h3.sub { margin: 2rem 0 1rem; color: var(--accent); }
 /* ===== STYLE SECTION: stat-counters | START ===== */
 .stat-num { font-variant-numeric: tabular-nums; }
 /* ===== STYLE SECTION: stat-counters | END ===== */
+
+/* ===== STYLE SECTION: creative-media | START ===== */
+.media-item img {
+  aspect-ratio: 4 / 3; object-fit: cover; /* keeps every photo the same shape in the grid */
+}
+.media-item video {
+  width: 100%; aspect-ratio: 16 / 9; border-radius: 14px;
+  display: block; background: #000; object-fit: contain;
+}
+/* For vertical reels, add class="vertical" to the <video> or <iframe> */
+.media-item .vertical { aspect-ratio: 9 / 16; max-width: 320px; margin: 0 auto; }
+/* ===== STYLE SECTION: creative-media | END ===== */
